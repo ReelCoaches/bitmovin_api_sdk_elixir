@@ -10,7 +10,7 @@ defmodule Bitmovin.MixProject do
       deps: deps(),
       description: description(),
       package: package(),
-      source_url: "https://github.com/ReelCoaches/bitmovin_api_sdk_elixir"
+      source_url: source_url()
     ]
   end
 
@@ -42,7 +42,14 @@ defmodule Bitmovin.MixProject do
   defp package do
     [
       name: "bitmovin_api_sdk_elixir",
-      licenses: ["MIT"]
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => source_url()
+      }
     ]
+  end
+
+  defp source_url do
+    "https://github.com/ReelCoaches/bitmovin_api_sdk_elixir"
   end
 end
