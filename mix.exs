@@ -7,7 +7,10 @@ defmodule Bitmovin.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: description(),
+      package: package(),
+      source_url: "https://github.com/ReelCoaches/bitmovin_api_sdk_elixir"
     ]
   end
 
@@ -27,7 +30,19 @@ defmodule Bitmovin.MixProject do
       {:jason, "~> 1.1"},
       {:exconstructor, "~> 1.1"},
       {:proper_case, "~> 1.3"},
-      {:atomic_map, "~> 0.9.3"}
+      {:atomic_map, "~> 0.9.3"},
+      {:ex_doc, "~> 0.21.2", only: :dev, runtime: false}
+    ]
+  end
+
+  defp description do
+    "Elixir SDK for the Bitmovin REST API"
+  end
+
+  defp package do
+    [
+      name: "bitmovin_api_sdk_elixir",
+      licenses: ["MIT"]
     ]
   end
 end
